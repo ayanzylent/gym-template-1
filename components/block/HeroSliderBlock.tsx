@@ -67,7 +67,7 @@ export function HeroSliderBlock() {
                   alt="Gym Hero Background"
                   fill
                   priority={index === 0} // High priority for first slide
-                  className="object-cover object-center transform scale-105"
+                  className="object-cover object-center transform"
                   quality={90}
                 />
                 {/* Gradient Overlays for better text contrast */}

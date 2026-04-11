@@ -13,6 +13,7 @@ import { useRef } from "react";
 import { AnimatedText } from "@/components/custom/AnimatedText";
 import { PrimaryButton } from "@/components/custom/PrimaryButton";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const slides = [
   {
@@ -45,6 +46,7 @@ export function HeroSliderBlock() {
   const plugin = useRef(
     Autoplay({ delay: 5000, stopOnInteraction: true })
   );
+
 
   return (
     <section className="relative h-[100vh] w-full bg-black overflow-hidden">
@@ -105,8 +107,10 @@ export function HeroSliderBlock() {
                       transition={{ delay: 1, duration: 0.6 }}
                       className="flex flex-wrap gap-4"
                     >
-                      <PrimaryButton>BOOK AN APPOINTMENT</PrimaryButton>
-                      <PrimaryButton variant="outline" className="bg-transparent border-border text-foreground hover:bg-white hover:text-black">
+                      <PrimaryButton asChild>
+                        <Link href={`https://wa.me/${process.env.NEXT_PUBLIC_MOBILE_NUMBER}`}>BOOK AN APPOINTMENT</Link>
+                      </PrimaryButton>
+                      <PrimaryButton variant="outline" className="bg-transparent border-border text-foreground">
                         VIEW PLANS
                       </PrimaryButton>
                     </motion.div>

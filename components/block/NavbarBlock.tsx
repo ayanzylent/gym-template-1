@@ -8,11 +8,7 @@ const navLinks = [
   { name: "HOME", href: "#" },
   { name: "ABOUT US", href: "#about" },
   { name: "SERVICES", href: "#services" },
-  { name: "MEMBERSHIP PLANS", href: "#plans" },
-  { name: "OFFERS", href: "#offers" },
-  { name: "GALLERY", href: "#gallery" },
-  { name: "BLOG", href: "#blog" },
-  { name: "CONTACT US", href: "#contact" },
+  { name: "CONTACT US", href: `https://wa.me/${process.env.NEXT_PUBLIC_MOBILE_NUMBER}` },
 ];
 
 export function NavbarBlock() {
@@ -40,7 +36,7 @@ export function NavbarBlock() {
             RETRO<span className="text-primary">FIT</span>
           </span>
         </Link>
-        
+
         <nav className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
             <Link
